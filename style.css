@@ -95,6 +95,7 @@ main {
     border-radius: 0.3125rem;
     background-color: var(--green-800);
     color: var(--white);
+    cursor: pointer;
 }
 
 .tip #other {
@@ -157,4 +158,24 @@ main {
     font-size: 1.25rem;
     text-transform: uppercase;
     padding-block: 0.5rem ;
+    cursor: pointer;
+}
+
+@media(min-width: 920px) {
+    main {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem;
+        border-radius: 1.5625rem;
+        max-width: 55.5rem;
+        margin-inline: auto;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    .tip div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

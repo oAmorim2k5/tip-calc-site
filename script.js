@@ -24,8 +24,16 @@ function receivePeopleQuant(event){
         people = Number(event.target.value)
         pError.style.display = "none"
         divError.setAttribute("id", "")
+        console.log("Number of people: " + people)
     }
-    people = Number(event.target.value)
-    console.log("Number of people: " + people)
+}
 
+const tipButton = document.querySelectorAll(".tip input[type='button']")
+tipButton.forEach(button => {
+    button.addEventListener("click", receiveTip )
+})
+
+function receiveTip(event){
+    tip = Number(event.target.value)/100
+    console.log(tip)
 }

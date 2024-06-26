@@ -29,6 +29,7 @@ header {
 }
 
 main {
+    border-radius: 1.5625rem 1.5625rem 0 0 ;
     background-color: var(--white);
     padding: 2rem;
 }
@@ -110,3 +111,34 @@ main {
     display: none;
 }
 
+.results {
+    background-color: var(--green-800);
+    border-radius: 0.9375rem;
+    padding: 1.5rem;
+}
+
+.results div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results div > strong {
+    color: var(--light-green);
+    font-size: 2rem;
+}
+
+.results p {
+    color: var(--green-400);
+    font-size: 0.8125rem;
+}
+
+.results p strong {
+    color: var(--white);
+    font-size: 1rem;
+
+}
+
+.results .tip-total {
+    margin-bottom: 1.25rem;
+}

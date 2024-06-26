@@ -34,12 +34,14 @@ main {
 }
 
 .bill label, 
-.tip label {
+.tip label,
+.people label {
     color: var(--green-500);
     font-weight: 700;
 }
 
-.bill div {
+.bill div,
+.people div {
     margin-top: 0.4rem;
     background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
@@ -50,7 +52,8 @@ main {
     margin-bottom: 2rem;
 }
 
-.bill input {
+.bill input,
+.people input {
     border: none;
     text-align: right;
     width: 100%;
@@ -61,11 +64,13 @@ main {
     outline: none;
 }
 
-.bill input::placeholder {
+.bill input::placeholder,
+.people input::placeholder {
     color: var(--green-300);
 }
 
-.bill:has(input:focus) div{
+.bill:has(input:focus) div,
+.people:has(input:focus) div{
     outline: 2px solid var(--light-green);
 }
 
@@ -99,5 +104,9 @@ main {
 
 .tip #other::placeholder {
     color: var(--green-300);
+}
+
+.people #error {
+    display: none;
 }
 

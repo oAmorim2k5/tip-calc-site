@@ -30,10 +30,10 @@ function receivePeopleQuant(event){
 
 const tipButton = document.querySelectorAll(".tip input[type='button']")
 tipButton.forEach(button => {
-    button.addEventListener("click", receiveTipButton )
+    button.addEventListener("click", receiveTip )
 })
 
-function receiveTipButton(event){
+function receiveTip(event){
     tipButton.forEach(button => {
         button.classList.remove("selected-button")
         if(button.value === event.target.value){
@@ -41,6 +41,16 @@ function receiveTipButton(event){
         }
     })
 
-    tip = parseFloat(event.target.value)/100
+    if(event.target.value !== "") {
+        tip = parseFloat(event.target.value)/100
+    }else{
+        tip = 0
+    }
+
+    
     console.log(tip)
 }
+
+const tipInput = document.querySelector("#other")
+tipInput.addEventListener("input", receiveTip)
+

@@ -110,6 +110,11 @@ main {
     color: var(--white);
 }
 
+.tip .selected-button {
+    background-color: var(--light-green);
+    color: var(--green-800);
+}
+
 .tip input[type="button"]:hover,
 .results button:hover {
     background-color: var(--green-hover);

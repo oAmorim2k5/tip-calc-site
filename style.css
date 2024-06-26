@@ -176,12 +176,16 @@ main {
 
 }
 
+.result .total {
+    margin-bottom: 1.25rem;
+}
+
 .results .tip-total {
     margin-bottom: 1.25rem;
 }
 
-.results .total {
-    margin-bottom: 2rem;
+.results .total-person {
+    margin-bottom: 1.25rem;
 }
 
 .results button {

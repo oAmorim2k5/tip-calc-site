@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Space Mono", serif;
 }
 
 :root {
@@ -27,3 +28,56 @@ header {
     padding-block: 2.8rem;
 }
 
+main {
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.bill label, 
+.tip label {
+    color: var(--green-500);
+    font-weight: 700;
+}
+
+.bill div {
+    margin-top: 0.4rem;
+    background-color: var(--green-100);
+    padding: 0.4rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.3125rem;
+    margin-bottom: 2rem;
+}
+
+.bill input {
+    border: none;
+    text-align: right;
+    width: 100%;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green-800);
+    outline: none;
+}
+
+.bill input::placeholder {
+    color: var(--green-300);
+}
+
+.bill:has(input:focus) div{
+    outline: 2px solid var(--light-green);
+}
+
+.tip div {
+    margin-top: 1rem;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.tip #other {
+    width: 100%;
+}

@@ -75,9 +75,29 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    margin-bottom: 2rem;
 
+}
+
+.tip input {
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding-block: 0.4rem;
+    border-radius: 0.3125rem;
+    background-color: var(--green-800);
+    color: var(--white);
 }
 
 .tip #other {
+    background-color: var(--green-100);
     width: 100%;
+    color: var(--green-500);
 }
+
+.tip #other::placeholder {
+    color: var(--green-300);
+}
+

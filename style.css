@@ -118,7 +118,7 @@ main {
     padding: 1.5rem;
 }
 
-.results div {
+.results div div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -162,6 +162,10 @@ main {
 }
 
 @media(min-width: 920px) {
+    header {
+        padding-block: 3rem;
+    }
+
     main {
         display: flex;
         gap: 3rem;
@@ -175,7 +179,24 @@ main {
         width: 100%;
     }
 
+    .bill input::-webkit-inner-spin-button,
+    .people input::-webkit-inner-spin-button {
+        display: none;
+    }
+
     .tip div {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tip #other::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    .results {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 2.5rem;
     }
 }

@@ -15,7 +15,15 @@
     --green-700: #3d6666;
     --green-800: #00474b;
     --light-green: #26c2ae;
+    --green-hover: #9fe8df;
     --white: #ffffff;
+    --danger: #e17457
+}
+
+.bill input::-webkit-inner-spin-button,
+.people input::-webkit-inner-spin-button,
+.tip #other::-webkit-inner-spin-button {
+    display: none;
 }
 
 body {
@@ -42,7 +50,7 @@ main {
 }
 
 .bill div,
-.people div {
+.people .input-box {
     margin-top: 0.4rem;
     background-color: var(--green-100);
     padding: 0.4rem 1.2rem;
@@ -71,8 +79,13 @@ main {
 }
 
 .bill:has(input:focus) div,
-.people:has(input:focus) div{
+.bill:has(input:hover) div,
+.people:has(input:focus) .input-box,
+.people:has(input:hover) .input-box,
+.tip #other:focus,
+.tip #other:hover {
     outline: 2px solid var(--light-green);
+    cursor: pointer;
 }
 
 .tip div {
@@ -95,6 +108,11 @@ main {
     border-radius: 0.3125rem;
     background-color: var(--green-800);
     color: var(--white);
+}
+
+.tip input[type="button"]:hover,
+.results button:hover {
+    background-color: var(--green-hover);
     cursor: pointer;
 }
 
@@ -108,7 +126,20 @@ main {
     color: var(--green-300);
 }
 
+.people .people-error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.people #error-div {
+    outline: 2px solid var(--danger);
+}
+
 .people #error {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--danger);
     display: none;
 }
 
@@ -179,17 +210,8 @@ main {
         width: 100%;
     }
 
-    .bill input::-webkit-inner-spin-button,
-    .people input::-webkit-inner-spin-button {
-        display: none;
-    }
-
     .tip div {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .tip #other::-webkit-inner-spin-button {
-        display: none;
     }
 
     .results {
